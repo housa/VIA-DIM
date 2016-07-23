@@ -5,3 +5,23 @@ body {
 body>header {
     margin-bottom: 2em;
 }
+
+.WeekdayCol {
+    width: 14%;
+}
+
+.SubjectCol {
+    width: 36%;
+}
+
+.LitteratureCol {
+    width: 22%;
+}
+
+.ExercisesCol {
+    width: 13%;
+}
+
+.AssignmentsCol {
+    width: 15%;
+}

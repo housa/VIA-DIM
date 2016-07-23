@@ -5,8 +5,8 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/day-1', function(req, res, next) {
-    res.render('notes/day-1', { title: 'Express' });
+router.get('/day-1-exercises', function(req, res, next) {
+    res.render('notes/day-1-exercises', { title: 'Day 1' });
 });
 
 module.exports = router;

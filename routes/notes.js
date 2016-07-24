@@ -5,8 +5,16 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/day-1-exercises', function(req, res, next) {
-    res.render('notes/day-1-exercises', { title: 'Day 1' });
+[1, 2].forEach((current, index) => {
+    router.get('/day-' + current + '-exercises', function(req, res, next) {
+        res.render('notes/day-' + current + '-exercises', { title: 'Day ' + current });
+    });
+});
+
+[1].forEach((current, index) => {
+    router.get('/assignment-' + current, function(req, res, next) {
+        res.render('notes/assignment' + current, { title: 'Assignment ' + current });
+    });
 });
 
 module.exports = router;

@@ -13,7 +13,7 @@ var router = express.Router();
 
 [1].forEach((current, index) => {
     router.get('/assignment-' + current, function(req, res, next) {
-        res.render('notes/assignment' + current, { title: 'Assignment ' + current });
+        res.render('notes/assignment-' + current, { title: 'Assignment ' + current });
     });
 });
 

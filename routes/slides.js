@@ -5,8 +5,11 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/day-1', function(req, res, next) {
-    res.render('slides/day-1', { title: 'day 1' });
+
+[1, 2].forEach((current, index) => {
+    router.get('/day-' + current, function(req, res, next) {
+        res.render('slides/day-' + current, { title: 'Day ' + current });
+    });
 });
 
 module.exports = router;

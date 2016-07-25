@@ -1,0 +1,85 @@
+extends layout
+
+block content
+  section
+    h2 Introduction to Digital Multimedia
+    i Day 2
+  section
+    h2 Agenda
+    ul
+      li Vector Graphics
+      li SVG
+        ul
+          li HTML
+          li XML
+          li SVG
+  section
+    h2 Vector Graphics fundamentals
+    ul
+      li Coordinates and vectors
+      li Rendering
+        ul
+          li sampling and reconstruction
+          li possible staircasing
+      li anti-aliasing
+        ul
+          li single-pixel-approximation
+          li brightness proportional to the area of intersection
+  section
+    h2 Vector objects
+    ul
+      li rectangles
+      li ellipses
+      li straight lines
+      li polygons
+      li Bézier curves
+      li stroke and fill
+  section
+    h2 Transformations
+    ul
+      li affine transformations
+        ul
+          li translation
+          li scaling
+          li rotation
+          li reflection
+          li shearing
+      li Distortion
+        ul
+          li moving anchor points and control points
+  section
+    h2 SVG
+    ul
+      li XML based language
+  section
+    h2 HTML needed for now
+    pre
+      code.html.
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+
+        &lt;h1&gt;My first SVG&lt;/h1&gt;
+
+        ...svg...
+
+        &lt;/body&gt;
+        &lt;/html&gt;
+  section
+    h2 XML basics
+    ul
+      li store data
+      li no predefined tags
+      li tree-structure
+  section
+    h2 XML
+    pre
+      code.xml.
+        &lt;root&gt;
+          &lt;child&gt;
+            &lt;subchild&gt;.....&lt;/subchild&gt;
+          &lt;/child&gt;
+        &lt;/root&gt;

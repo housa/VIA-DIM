@@ -11,7 +11,7 @@ var router = express.Router();
     });
 });
 
-[1, 2].forEach((current, index) => {
+[1, 2, 3].forEach((current, index) => {
     router.get('/assignment-' + current, function(req, res, next) {
         res.render('notes/assignment-' + current, { title: 'Assignment ' + current });
     });

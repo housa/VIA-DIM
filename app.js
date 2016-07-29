@@ -27,10 +27,10 @@ var handin = require('./routes/handin');
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 // Set the routes
-app.use('/', routes);
 app.use('/slides', slides);
 app.use('/notes', notes);
 app.use('/handin', handin);
+app.use('/', routes);
 
 
 // uncomment after placing your favicon in /public

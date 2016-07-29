@@ -8,7 +8,26 @@ var multer = require('multer');
 var upload = multer();
 var Zip = require('express-zip');
 
-/* GET home page. */
+router.post('/upload-webpage', upload.single('handinWebpage'), function (req, res, next) {
+    var handinFolder = __dirname + "/../public/webpages/" + req.body.student + "/";
+
+    try {
+        fs.accessSync(__dirname + "/../public/webpages/");
+    } catch (e) {
+        fs.mkdirSync(__dirname + "/../public/webpages/");
+    } finally {
+        try {
+            fs.accessSync(__dirname + "/../public/webpages/" + req.body.student);
+        } catch (e) {
+            fs.mkdirSync(__dirname + "/../public/webpages/" + req.body.student);
+        }
+    }
+
+    fs.writeFileSync(handinFolder + req.file.originalname, req.file.buffer, { flag: 'w'});
+    console.log("[HandIn] : " + req.body.student + " uploaded file: " + req.file.originalname);
+    res.redirect('back');
+});
+
 router.post('/:handinNr', upload.single('handinPackage'), function(req, res, next) {
   var handinFolder = __dirname + "/../hand-ins/" + req.params.handinNr + "/" + req.body.student + "/";
 
